@@ -124,4 +124,4 @@ description: >-
 - 岗位层级维度表：[dimensions.md](dimensions.md)
 - 输出骨架（多受众）：[templates.md](templates.md)
 - 团队参考模板（可选）：[../templates/interview-evaluation.md](../templates/interview-evaluation.md)
-- 术语与招聘文档分工：[../shared/terminology.md](../shared/terminology.md)
+- 工作流与边界说明：[../shared/workflow.md](../shared/workflow.md)
