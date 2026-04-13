@@ -4,7 +4,7 @@ description: >-
   Generate interview evaluation records from meeting transcripts, optional JD and resume, and optional
   interviewer notes. Routes by audience and candidate communication intent (advance, hold, or decline;
   defaults to neutral hold if unspecified). Uses qualitative recommendation and one-line strength/risk
-  summaries—no numeric hire score. Apply industry writing norms from shared/industry-norms.md. Use when asked
+  summaries—no numeric hire score. Apply industry writing norms from industry-norms.md. Use when asked
   for 面试评价, 面评, interview feedback, interview assessment, or post-interview evaluation documents.
 ---
 
@@ -12,9 +12,9 @@ description: >-
 
 ## 工作流概览
 
-**两遍写作法**：Pass 1 从原材料提取结构化信号与客观一句话优劣势；Pass 2 按受众与候选人沟通倾向套用模板，并遵守 [../shared/industry-norms.md](../shared/industry-norms.md) 中对应行业的长度与禁忌。
+**两遍写作法**：Pass 1 从原材料提取结构化信号与客观一句话优劣势；Pass 2 按受众与候选人沟通倾向套用模板，并遵守 [industry-norms.md](industry-norms.md) 中对应行业的长度与禁忌。
 
-**模板优先级：** 若本次对话中用户提供了结构/模板（粘贴或附件），**输出结构以用户模板为准**。若未提供：参考 [../templates/interview-evaluation.md](../templates/interview-evaluation.md)（团队样例）、[templates.md](templates.md)（多受众骨架库）、[../shared/industry-norms.md](../shared/industry-norms.md)，结合 **行业** 组织章节与长度，**不要求**与仓库样例逐字一致。
+**模板优先级：** 若本次对话中用户提供了结构/模板（粘贴或附件），**输出结构以用户模板为准**。若未提供：参考 [templates/interview-evaluation.md](templates/interview-evaluation.md)（团队样例）、[templates.md](templates.md)（多受众骨架库）、[industry-norms.md](industry-norms.md)，结合 **行业** 组织章节与长度，**不要求**与仓库样例逐字一致。
 
 ---
 
@@ -36,7 +36,7 @@ description: >-
    - **用户未回答**：一律使用 [templates.md](templates.md) 中的 **候选人·待定** 模板（中性兜底）。
 3. **定性推荐**（面试官存档、HR 用）：推荐进入下一轮 / 待定 / 不推荐（可与用户确认或由材料归纳，须在输出中明示）
 4. **行业**：优先从 JD 推断；推断不出则问用户（互联网 / 消费品 / 制造业 / 金融 / 医疗药械 / 咨询 / 其他）  
-   - 无法判断时：先按 [../shared/industry-norms.md](../shared/industry-norms.md) 的 **通用** 节撰写，并提示用户确认行业后必要时再改一版。
+   - 无法判断时：先按 [industry-norms.md](industry-norms.md) 的 **通用** 节撰写，并提示用户确认行业后必要时再改一版。
 5. **岗位层级**：优先从 JD（职级、年限、职责范围）推断为 Junior / Senior / Manager+；不确定则询问用户
 6. **输出长度**（可选，可被行业规范覆盖）：简报 / 标准 / 详细；默认与 industry-norms 中该行业建议对齐
 
@@ -48,8 +48,8 @@ description: >-
 
 **输入融合优先级：**
 - 内容：interviewer notes（若有）> transcript；**JD** 定岗位与行业语境；**简历** 用于与面试陈述交叉核对（只记录面试中可印证的差异或一致点）
-- 格式：**用户随对话提供的模板**（若有）> 仓库参考 [../templates/interview-evaluation.md](../templates/interview-evaluation.md) > [templates.md](templates.md)
-- 行业与长度：**执行前阅读** [../shared/industry-norms.md](../shared/industry-norms.md) 中与当前行业匹配的章节（含通用节）
+- 格式：**用户随对话提供的模板**（若有）> 仓库参考 [templates/interview-evaluation.md](templates/interview-evaluation.md) > [templates.md](templates.md)
+- 行业与长度：**执行前阅读** [industry-norms.md](industry-norms.md) 中与当前行业匹配的章节（含通用节）
 
 **提取目标：**
 
@@ -120,8 +120,8 @@ description: >-
 
 ## 参考文件
 
-- 行业长度、术语、禁忌：[../shared/industry-norms.md](../shared/industry-norms.md)
+- 行业长度、术语、禁忌：[industry-norms.md](industry-norms.md)
 - 岗位层级维度表：[dimensions.md](dimensions.md)
 - 输出骨架（多受众）：[templates.md](templates.md)
-- 团队参考模板（可选）：[../templates/interview-evaluation.md](../templates/interview-evaluation.md)
-- 工作流与边界说明：[../shared/workflow.md](../shared/workflow.md)
+- 团队参考模板（可选）：[templates/interview-evaluation.md](templates/interview-evaluation.md)
+- 工作流与边界说明：[workflow.md](workflow.md)
