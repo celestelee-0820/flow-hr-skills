@@ -1,7 +1,7 @@
 # 行业撰写规范（Reference）
 
 > 执行面评前：根据 JD / 用户确认确定行业；无法判断时先读 **通用** 节，并向用户确认行业后再套用对应章节。
-> 本文件管 **语气、长度、术语倾向、禁忌**；评估维度列表仍以 [dimensions.md](dimensions.md) 为准。
+> 本文件管 **语气、长度、术语倾向、禁忌**；评估维度列表仍以 [dimensions.md](../interview-evaluation/dimensions.md) 为准。
 
 ---
 
