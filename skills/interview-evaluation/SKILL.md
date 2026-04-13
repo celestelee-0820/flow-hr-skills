@@ -29,8 +29,7 @@ description: >-
 | 候选人层级 | Junior / Senior / Manager+ | 从 JD 或职位名称推断；不确定则问 |
 | 面试官角色 | 一面（直属主管）/ 二面（总监）/ 三面（GM） | 用户提供；无则默认一面 |
 | 行业 | 互联网 / 消费品 / 制造业 / 金融 / 医疗 / 咨询 | 从 JD 推断；不确定则先用 `industry-norms/common.md` |
-| 受众 | 候选人 / 面试官存档 / HR 决策支持 / 跨部门同步 | 必须确认 |
-| 候选人沟通倾向 | 推进 / 待定 / 不推进（受众=候选人时） | 必须先问；无回答→默认「待定」 |
+| 受众 | 面试官存档 / HR 决策支持 / 跨部门同步 | 必须确认 |
 
 ---
 
@@ -71,11 +70,8 @@ description: >-
 
 **模板加载（一次只读一个文件）：**
 
-| 受众 + 沟通倾向 | 加载文件 |
-|----------------|---------|
-| 候选人 · 推进 | `templates/candidate-advance.md` |
-| 候选人 · 待定（含默认兜底） | `templates/candidate-hold.md` |
-| 候选人 · 不推进 | `templates/candidate-decline.md` |
+| 受众 | 加载文件 |
+|------|---------|
 | 面试官存档 | `templates/internal-archive.md` |
 | HR 决策支持 | `templates/hr-decision.md` |
 | 跨部门同步 | `templates/cross-functional.md` |
