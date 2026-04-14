@@ -1,11 +1,12 @@
 ---
-name: interview-evaluation
+
+## name: interview-evaluation
+
 description: >-
   Generate interview evaluation records from meeting transcripts, optional JD, resume, and
   interviewer notes. Routes by candidate level, interviewer round, industry, and audience.
   Use when asked for 面试评价, 面评, interview feedback, interview assessment, or
   post-interview evaluation documents.
----
 
 # 面试评价记录生成
 
@@ -13,6 +14,7 @@ description: >-
 
 **① 前置面试记录检查**  
 搜索 `zoom-docs/` 中是否有同名候选人的既往面试记录。  
+
 - 有 → 作为 Pass 1 前序上下文，标注「前序面试结论」  
 - 无 → 询问「是否有前期面试记录可参考？」（可选，跳过不影响流程）
 
@@ -24,12 +26,14 @@ description: >-
 
 **④ 路由参数**（从输入推断；推断不出则询问）
 
-| 参数 | 取值 | 推断失败时 |
-|------|------|-----------|
-| 候选人层级 | Junior / Senior / Manager+ | 从 JD 或职位名称推断；不确定则问 |
-| 面试官角色 | 一面（直属主管）/ 二面（总监）/ 三面（GM） | 用户提供；无则默认一面 |
-| 行业 | 互联网 / 消费品 / 制造业 / 金融 / 医疗 / 咨询 | 从 JD 推断；不确定则先用 `industry-norms/common.md` |
-| 受众 | 面试官存档 / HR 决策支持 / 跨部门同步 | 必须确认 |
+
+| 参数    | 取值                             | 推断失败时                                     |
+| ----- | ------------------------------ | ----------------------------------------- |
+| 候选人层级 | Junior / Senior / Manager+     | 从 JD 或职位名称推断；不确定则问                        |
+| 面试官角色 | 一面（直属主管）/ 二面（总监）/ 三面（GM）       | 用户提供；无则默认一面                               |
+| 行业    | 互联网 / 消费品 / 制造业 / 金融 / 医疗 / 咨询 | 从 JD 推断；不确定则先用 `industry-norms/common.md` |
+| 受众    | 面试官存档 / HR 决策支持 / 跨部门同步        | 必须确认                                      |
+
 
 ---
 
@@ -37,12 +41,14 @@ description: >-
 
 **加载规则（不多读）：**
 
-| 路由结果 | 加载文件 |
-|---------|---------|
-| 候选人层级 | `dimensions/junior.md` 或 `senior.md` 或 `manager.md`（三选一） |
-| 行业附加维度（若行业已知） | `dimensions/industry-extras.md` |
-| 合规规范（必读） | `industry-norms/common.md` |
-| 行业细则（若行业已知） | `industry-norms/<行业>.md`（六选一） |
+
+| 路由结果          | 加载文件                                                     |
+| ------------- | -------------------------------------------------------- |
+| 候选人层级         | `dimensions/junior.md` 或 `senior.md` 或 `manager.md`（三选一） |
+| 行业附加维度（若行业已知） | `dimensions/industry-extras.md`                          |
+| 合规规范（必读）      | `industry-norms/common.md`                               |
+| 行业细则（若行业已知）   | `industry-norms/<行业>.md`（六选一）                            |
+
 
 **面试官角色 → 考察层激活规则：**  
 每个维度文件含「考察层」列（深度 / 广度 / 高度），按面试官角色筛选重点：
@@ -70,13 +76,17 @@ description: >-
 
 **模板加载（一次只读一个文件）：**
 
-| 受众 | 加载文件 |
-|------|---------|
-| 面试官存档 | `templates/internal-archive.md` |
-| HR 决策支持 | `templates/hr-decision.md` |
-| 跨部门同步 | `templates/cross-functional.md` |
+
+| 受众      | 加载文件                            |
+| ------- | ------------------------------- |
+| 面试官存档   | `templates/internal-archive.md` |
+| HR 决策支持 | `templates/hr-decision.md`      |
+| 跨部门同步   | `templates/cross-functional.md` |
+
 
 **通用原则：**
+
 - 全文不使用综合分制（1–5 分、X/5）作为录用结论
 - 有行为证据再写判断；无证据标「证据不足」
 - 中文输出，除非用户要求英文
+
