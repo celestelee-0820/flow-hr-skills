@@ -2,3 +2,6 @@
 *.swp
 *.swo
 .idea/
+
+# 面评参考资料（含敏感信息，仅本地使用）
+skills/interview-evaluation/reference/
